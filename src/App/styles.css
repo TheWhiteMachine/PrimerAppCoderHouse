@@ -1,0 +1,89 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.nav{
+    display: flex;
+    background-color: rgb(141, 137, 137);
+    height: 50px;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+
+
+}
+.logo{
+    float: left;
+    margin-left: 10px;
+}
+    .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+
+    }
+
+  .nav  li {
+        margin-right: 10px;
+        display: inline;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+.nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    align-items: center;
+    justify-items: center;
+
+}
+
+
+.nav ul li a:hover {
+    background-color: black;
+    color: antiquewhite;
+    height: 100%;
+    padding : 12px;
+    justify-items: center;
+}
+
+.options  {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+    align-content: center;
+    justify-items: center;
+    line-height: 42px;
+    height: 100%;
+}
+.material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+}
+
+.submit{
+    width:70px;
+    height: 30px;;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    text-align: center;
+    text-justify: center;
+    margin-right: 10px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 20%;
+    padding-top: 3px;
+    padding-right: 10px;
+
+}
+
+.submit:hover {
+    background-color: black;
+    color: aliceblue;
+}

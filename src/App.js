@@ -1,20 +1,10 @@
-import personas from "./data/personas.json";
+import NavBar from "./components/NavBar";
+import  "./App/styles.css";
 
 function App() {
   return (
     <div className="App">
-     <h1>Hola Coder House</h1>
-      <div >
-       { personas.map(persona =>(
-          <div > 
-            <p>Nombre:<strong>{persona.nombre}</strong> </p>
-            <p>Edad: <strong>{persona.edad}</strong></p>
-            <line></line>
-            <br />
-          </div>
-        ))
-      }
-      </div>
+      <NavBar/>
     </div>
   );
 }
