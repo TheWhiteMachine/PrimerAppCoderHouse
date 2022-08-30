@@ -2,6 +2,9 @@ import { CartWidget } from "./CartWidget";
 
 
 function Navbar() {
+
+
+
     return (
         <>
             <div className="nav">
