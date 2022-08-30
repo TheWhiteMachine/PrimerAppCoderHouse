@@ -1,25 +1,35 @@
 import React from 'react'
 import { useState } from 'react';
 
-export default function ItemCount({ stock, initial, }) {
+export default function ItemCount({ stock, initial }) {
 
 
     const [count, setCount] = useState(initial);
+    const [mensaje, setMensaje] = useState(<></>);
 
     const addOn = (count) => {
-        count < stock ? setCount(count + 1) : console.log("no hay stock")
+        setMensaje(() => { return (<></>) })
+        count < stock ? setCount(count + 1) : setMensaje(() => {
+            return (<p style={{ color: "red" }}> Stock alcanzado</p >)
+        })
     }
 
-    const mensaje = <></>;
+    const restOn = (count) => {
+        setMensaje(() => { return (<></>) })
+        count > 0 ? setCount(count - 1) : setMensaje(() => { return (<p style={{ color: "red" }}>Sin productos </p>) })
+    }
+
+
+
 
     return (
         <div>
             <div className='cajaCarrito'>
                 <div className="productslist">
-                    <spam>Producto Elegido</spam>
+                    <span>Producto Elegido</span>
                     <div className="cantProducto">
-                        <button href="#" className="menos" onClick={() =>
-                            count >= 1 ? setCount(count - 1) : console.log("0 producto")}>-</button>
+                        <button href="#" className="menos" onClick={() => restOn(count)}
+                        >-</button>
                         <p>
                             {count}
                         </p>
@@ -30,10 +40,11 @@ export default function ItemCount({ stock, initial, }) {
                     <button>Agregar al carrito</button>
 
 
-
-
-                    <span className='mensaje'>{mensaje}</span>
                 </div>
+
+
+
+                <p>{mensaje}</p>
             </div>
 
         </div >
