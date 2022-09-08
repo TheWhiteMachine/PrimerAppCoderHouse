@@ -11,13 +11,14 @@ function Navbar() {
                 <div className="logo">
                     <span className="material-symbols-outlined">
                         star_half</span>
-                </div>
 
+                </div>
+                <h3>TECNOTRONICA</h3>
                 <ul className="options">
-                    <li className="inicio"><a href="#">HOME</a></li>
-                    <li><a href="#">OFERTAS</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li className="inicio"><p>HOME</p></li>
+                    <li><p href="#">OFERTAS</p></li>
+                    <li><p href="#">ABOUT US</p></li>
+                    <li><p href="#">CONTACT</p></li>
                 </ul>
                 <div className="submit">Log in</div>
                 <CartWidget />

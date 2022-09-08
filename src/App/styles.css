@@ -30,26 +30,27 @@
 
 .nav li {
     margin-right: 10px;
-    display: inline;
+    display: flex;
+    flex-direction: row;
     height: 40px;
     justify-content: center;
     align-items: center;
 }
 
-.nav ul li a {
+.nav ul li p {
     text-decoration: none;
     color: aliceblue;
     align-items: center;
     justify-items: center;
-
+    transition: background-color 0.8s ease-out
 }
 
 
-.nav ul li a:hover {
+.nav ul li p:hover {
     background-color: black;
     color: antiquewhite;
-    height: 100%;
-    padding: 12px;
+    height: 40px;
+    padding: 5px;
     justify-items: center;
 }
 
@@ -158,4 +159,24 @@
     justify-content: space-between;
     align-items: center;
     color: rgb(113, 113, 113);
+}
+
+.detailsComponent {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    margin-top: 40px;
+}
+
+.detailsItem {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    border: 1px solid gray;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 3px;
 }
