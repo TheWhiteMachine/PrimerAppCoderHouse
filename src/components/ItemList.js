@@ -11,7 +11,7 @@ export default function ItemList({ datos }) {
             <div className='ListofItems'>
                 {
 
-                    datos.map(item => <li className="productItem" key={item.id}><h2>{item.name}</h2> <img src={item.pic} alt="img"></img><span> Precio {item.price}</span> <Item /> </li>)
+                    datos.map(item => <Item product={item} />)
 
                 }
             </div>
