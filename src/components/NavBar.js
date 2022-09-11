@@ -1,5 +1,5 @@
 import { CartWidget } from "./CartWidget";
-
+import { Link } from "react-router-dom"
 
 function Navbar() {
 
@@ -13,15 +13,15 @@ function Navbar() {
                         star_half</span>
 
                 </div>
-                <h3>TECNOTRONICA</h3>
+                <h3><Link to="/">TECNOTRONICA</Link></h3>
                 <ul className="options">
-                    <li className="inicio"><p>HOME</p></li>
-                    <li><p href="#">OFERTAS</p></li>
-                    <li><p href="#">ABOUT US</p></li>
-                    <li><p href="#">CONTACT</p></li>
+                    <li className="inicio"><link to="/">HOME</link></li>
+                    <li><Link to="">TELEFONIA</Link></li>
+                    <li><Link to="">INFORMATICA</Link></li>
+                    <li><Link to="">CONTACT US</Link></li>
                 </ul>
                 <div className="submit">Log in</div>
-                <CartWidget />
+                <CartWidget cantProducts={4} />
             </div>
             <div>
                 <h2>Las ofertas de la semana</h2>

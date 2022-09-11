@@ -33,7 +33,7 @@ export const GetItem = () => {
 
 }
 
-export function ItemDetailsContainer() {
+export const ItemDetailsContainer = () => {
 
     return (
         <>
@@ -43,3 +43,4 @@ export function ItemDetailsContainer() {
 
     )
 }
+

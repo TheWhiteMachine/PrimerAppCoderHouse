@@ -19,7 +19,7 @@ const productosList = [
 
 
 
-export const ItemListContainer = ({ greetings }) => {
+const ItemListContainer = ({ greetings }) => {
 
     const [datos, setDatos] = useState([]);
     const task = new Promise((resolve, reject) => (
@@ -41,3 +41,5 @@ export const ItemListContainer = ({ greetings }) => {
         </div>
     )
 }
+
+export default ItemListContainer;

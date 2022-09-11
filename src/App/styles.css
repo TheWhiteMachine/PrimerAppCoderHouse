@@ -42,7 +42,7 @@
     color: aliceblue;
     align-items: center;
     justify-items: center;
-    transition: background-color 0.8s ease-out
+    transition: background-color 0.8s ease
 }
 
 
@@ -167,6 +167,11 @@
     margin: 5px;
     box-shadow: 5px 10px 4px rgba(139, 139, 139, 0.1);
     border-radius: 25px;
+    transition: box-shadow 0.8s ease
+}
+
+.item:hover {
+    box-shadow: 5px 10px 4px rgba(240, 156, 0, 0.7);
 }
 
 .detailsComponent {
