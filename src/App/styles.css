@@ -21,7 +21,7 @@
 
 .nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 5px;
     padding: 0;
     width: 100%;
 
@@ -45,6 +45,10 @@
     transition: background-color 0.8s ease-out
 }
 
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
 
 .nav ul li p:hover {
     background-color: black;

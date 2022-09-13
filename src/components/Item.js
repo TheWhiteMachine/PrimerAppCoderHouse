@@ -1,4 +1,11 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+import { ItemDetailsContainer } from "./ItemDetailsContainer";
+
+const ShohDetails = () => {
+  console.log("mostrar detalles");
+  <Link to="/item:id" elemewnt={<ItemDetailsContainer />} />;
+};
 
 export default function Item({ product }) {
   return (
@@ -8,7 +15,7 @@ export default function Item({ product }) {
         <img src={product.pic} alt="img"></img>
         <span> Precio {product.price}</span>
 
-        <button>Detalles</button>
+        <button onClick={() => ShohDetails()}>Detalles</button>
       </li>
     </div>
   );
