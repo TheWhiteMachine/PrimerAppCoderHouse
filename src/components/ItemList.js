@@ -12,9 +12,12 @@ export default function ItemList({ datos }) {
                 {
 
                     datos.map(item => <Item product={item} />)
+                    
 
                 }
+                 
             </div>
+            
         </>
     )
 }

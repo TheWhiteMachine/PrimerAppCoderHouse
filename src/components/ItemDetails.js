@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
 
-export default function ItemDetails({ item }) {
-    return (
-        <>
-            <div className='detailsComponent'>
-                {
+export default function ItemDetails({ product }) {
+  return (
+    <>
+      <div className="detailsComponent">
+        <li className="productItemdetails" key={product.id}>
+          <h2>{product.name}</h2>
+          <img src={product.pic} alt="img"></img>
+          <br></br>
 
-                    item.map(item => <li className="detailsItem" key={item.id}><h2>{item.name}</h2> <img src={item.pic} alt="img"></img><span> Precio {item.price}</span> <p> <b>Descripcion:</b>   {item.description}</p> </li>)
-
-                }
-            </div>
-        </>
-    )
+          <b>
+            <span> Precio {product.price}</span>
+          </b>
+          <p> {product.description}</p>
+        </li>
+      </div>
+    </>
+  );
 }
