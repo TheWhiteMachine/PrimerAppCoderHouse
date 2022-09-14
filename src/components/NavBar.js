@@ -20,14 +20,14 @@ function Navbar() {
           </li>
           <li>
             <p>
-              <Link className="text-link" to="#">
+              <Link className="text-link" to="/category/">
                 TELEFONIA
               </Link>
             </p>
           </li>
           <li>
             <p>
-              <Link className="text-link" to="#">
+              <Link className="text-link" to="/category/">
                 INFORMATICA
               </Link>
             </p>

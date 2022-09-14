@@ -148,8 +148,8 @@
 }
 
 .productItem img {
-    width: 80%;
-    height: 80%;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
     border: 1px solid gray;
     background-color: antiquewhite;
@@ -170,8 +170,13 @@
     align-items: center;
     color: rgb(113, 113, 113);
     margin: 5px;
-    box-shadow: 5px 10px 4px rgba(139, 139, 139, 0.1);
+    box-shadow: 5px 10px 4px rgba(148, 38, 38, 0.1);
     border-radius: 25px;
+    transition: bbox-shadow 0.8s ease
+}
+
+.item:hover{
+        box-shadow: 5px 10px 4px rgba(180, 177, 1, 0.3);
 }
 
 .detailsComponent {

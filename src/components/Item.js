@@ -4,7 +4,7 @@ import { ItemDetailsContainer } from "./ItemDetailsContainer";
 
 const ShohDetails = () => {
   console.log("mostrar detalles");
-  <Link to="/item:id" elemewnt={<ItemDetailsContainer />} />;
+  <Link to="/item/" elemewnt={<ItemDetailsContainer />} />;
 };
 
 export default function Item({ product }) {
