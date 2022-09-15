@@ -9,8 +9,8 @@ const Router = () => (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route patch="/category/" element={<ItemListContainer />} />
-        <Route patch="/item/" element={<ItemDetailsContainer />} />
+        <Route path={"/category:id/"} element={<ItemListContainer />} />
+        <Route path={`/item:id/`} element={<ItemDetailsContainer />} />
         <Route
           path="*"
           element={<div style={{ margin: "50px" }}>Error 404 guey</div>}
