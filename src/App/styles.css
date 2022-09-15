@@ -21,7 +21,7 @@
 
 .nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 5px;
     padding: 0;
     width: 100%;
 
@@ -45,6 +45,10 @@
     transition: background-color 0.8s ease
 }
 
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
 
 .nav ul li p:hover {
     background-color: black;
@@ -140,11 +144,12 @@
 .productItem li {
     list-style: none;
 
+
 }
 
 .productItem img {
-    width: 80%;
-    height: 80%;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
     border: 1px solid gray;
     background-color: antiquewhite;
@@ -165,13 +170,13 @@
     align-items: center;
     color: rgb(113, 113, 113);
     margin: 5px;
-    box-shadow: 5px 10px 4px rgba(139, 139, 139, 0.1);
+    box-shadow: 5px 10px 4px rgba(148, 38, 38, 0.1);
     border-radius: 25px;
-    transition: box-shadow 0.8s ease
+    transition: bbox-shadow 0.8s ease
 }
 
 .item:hover {
-    box-shadow: 5px 10px 4px rgba(240, 156, 0, 0.7);
+    box-shadow: 5px 10px 4px rgba(180, 177, 1, 0.3);
 }
 
 .detailsComponent {
@@ -179,15 +184,12 @@
     grid-template-columns: auto auto;
     margin-top: 40px;
     border-radius: 25px;
-}
-
-.detailsItem {
     text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    width: 600px;
     height: auto;
     border: 1px solid gray;
     background-color: antiquewhite;
@@ -196,9 +198,29 @@
     border-radius: 25px;
 }
 
+
+
 .detailsItem img {
     width: 80%;
     height: 80%;
+    padding: 2px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    background-color: antiquewhite;
+    border-radius: 25px;
+}
+
+.productItemdetails {
+    list-style: none;
+}
+
+.productItemdetails li {
+    list-style: none;
+}
+
+.productItemdetails img {
+    width: 90%;
+    height: 90%;
     padding: 2px;
     margin-bottom: 10px;
     border: 1px solid gray;
