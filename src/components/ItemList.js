@@ -3,18 +3,18 @@ import { useParams } from "react-router-dom";
 import Item from "./Item";
 
 export default function ItemList({ datos }) {
-  const { category } = useParams();
+  const { id } = useParams();
 
   const datosporcategoria =
-    { category }.typeof !== undefined
-      ? datos.filter((d) => d.category === { category })
+    { id }.typeof !== undefined
+      ? datos.filter((d) => d.id == id)
       : datos;
 
   return (
     <>
       <div className="ListofItems">
         {datosporcategoria.map((item) => (
-          <Item product={item} />
+          <Item key={item.id} product={item} />
         ))}
       </div>
     </>

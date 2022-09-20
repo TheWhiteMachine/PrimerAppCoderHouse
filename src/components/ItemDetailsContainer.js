@@ -63,8 +63,11 @@ const task = new Promise((resolve, reject) =>
 );
 
 export function ItemDetailsContainer() {
+
   const { id } = useParams();
+
   const [item, setItem] = useState();
+
   useEffect(() => {
     task.then((data) => {
       setItem(data.find(p => p.id === id));
@@ -77,10 +80,11 @@ export function ItemDetailsContainer() {
   return (
     <>
       {item && item.map((i) =>
-        item.id === { id } && (
-          <ItemDetails key={'itemdetail' + i} product={item} />
-        )
+
+        <ItemDetails key={'itemdetail' + i} product={item} />
+
       )}
+
     </>
   );
 }
