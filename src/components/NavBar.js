@@ -9,7 +9,9 @@ function Navbar() {
         <div className="logo">
           <span className="material-symbols-outlined">star_half</span>
         </div>
-        <h3>TECNOTRONICA</h3>
+        <Link className="text-link" to="/">
+          <h3>TECNOTRONICA</h3>
+        </Link>
         <ul className="options">
           <li className="inicio">
             <p>

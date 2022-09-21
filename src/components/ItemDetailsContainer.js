@@ -1,90 +1,42 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import ItemDetails from "./ItemDetails";
-import Cargador from "../images/cargador.jpeg";
-import Earpods from "../images/earpods.webp";
-import Iphone from "../images/iphone.jpg";
-import Monitor from "../images/monitor.webp";
-import Teclado from "../images/teclado.jpg";
+import { getProducts } from "../Utils/Products";
 import { useParams } from "react-router-dom";
+import { ItemDetails } from "./ItemDetails"
 
-const productosList = [
-  {
-    id: 1,
-    name: "Iphone",
-    price: 500,
-    pic: Iphone,
-    description:
-      "Lorem ipsum dolor sit amet. Nam aliquid aperiam ex culpa quaerat sit labore galisum qui ratione voluptas ea adipisci voluptatum 33 quasi quam.",
-    category: "telefonia",
-  },
-  {
-    id: 2,
-    name: "Earpods",
-    price: 40,
-    pic: Earpods,
-    description:
-      "Lorem ipsum dolor sit amet. Nam aliquid aperiam ex culpa quaerat sit labore galisum qui ratione voluptas ea adipisci voluptatum 33 quasi quam.",
-    category: "telefonia",
-  },
-  {
-    id: 3,
-    name: "Cargador",
-    price: 20,
-    pic: Cargador,
-    description:
-      "Lorem ipsum dolor sit amet. Nam aliquid aperiam ex culpa quaerat sit labore galisum qui ratione voluptas ea adipisci voluptatum 33 quasi quam.",
-    category: "telefonia",
-  },
-  {
-    id: 4,
-    name: "Monitor",
-    price: 120,
-    pic: Monitor,
-    description:
-      "Lorem ipsum dolor sit amet. Nam aliquid aperiam ex culpa quaerat sit labore galisum qui ratione voluptas ea adipisci voluptatum 33 quasi quam.",
-    category: "informatica",
-  },
-  {
-    id: 5,
-    name: "Teclado",
-    price: 35,
-    pic: Teclado,
-    description:
-      "Lorem ipsum dolor sit amet. Nam aliquid aperiam ex culpa quaerat sit labore galisum qui ratione voluptas ea adipisci voluptatum 33 quasi quam.",
-    category: "informatica",
-  },
-];
 
-const task = new Promise((resolve, reject) =>
-  setTimeout(() => {
-    resolve(productosList);
-  }, 200)
-);
-
-export function ItemDetailsContainer() {
+export const ItemDetailsContainer = () => {
 
   const { id } = useParams();
+  const [product, setProduct] = useState([]);
 
-  const [item, setItem] = useState();
+
 
   useEffect(() => {
-    task.then((data) => {
-      setItem(data.find(p => p.id === id));
-      console.log('id: ', id, 'p:', data)
-      console.log("asignado", data.find(p => p.id == id));
-    });
-  }, []);
+    id ?
+
+      getProducts.then(data => setProduct(data.find(item => item.id == id)))
+
+      :
+      getProducts.then(data => setProduct(data))
+
+  }, [id]);
+
 
 
   return (
     <>
-      {item && item.map((i) =>
 
-        <ItemDetails key={'itemdetail' + i} product={item} />
+      <div className="ListofItems">
+        {
+          typeof id === "undefined" ?
+            <div>Cargando</div>
+            :
+            <ItemDetails key={product.id} product={product} />
 
-      )}
+        }
 
+      </div>
     </>
   );
 }

@@ -214,16 +214,18 @@
     list-style: none;
 }
 
-.productItemdetails li {
-    list-style: none;
-}
+
 
 .productItemdetails img {
-    width: 90%;
-    height: 90%;
+    height: 50%;
     padding: 2px;
+    max-height: 40%;
     margin-bottom: 10px;
     border: 1px solid gray;
     background-color: antiquewhite;
     border-radius: 25px;
+}
+
+footer {
+    margin-top: 30px;
 }

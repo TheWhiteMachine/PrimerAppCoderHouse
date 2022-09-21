@@ -1,6 +1,10 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
+
+
+
+
 export default function Item({ product }) {
   return (
     <div className="item">
@@ -11,6 +15,7 @@ export default function Item({ product }) {
         <Link to={`/item/${product.id}/`}>
           <button>Detalles</button>
         </Link>
+        {console.log(product.id)}
       </li>
     </div>
   );
