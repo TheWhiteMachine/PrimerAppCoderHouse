@@ -2,10 +2,10 @@
 Por Pablo Riveiro
 
 
-Se us{o React JS
+Se usó React JS
 Google Fonts para algunos iconos
 
-Aui la información de React para la instalación del proyecto
+Aquí la información de React para la instalación del proyecto
 
 
 
