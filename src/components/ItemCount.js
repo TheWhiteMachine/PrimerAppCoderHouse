@@ -1,24 +1,39 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 export default function ItemCount({ stock, initial }) {
 
 
     const [count, setCount] = useState(initial);
     const [mensaje, setMensaje] = useState(<></>);
+    const [prodShoped, setProdShoped] = useState(0)
 
-    const addOn = (count) => {
+
+    const add = (count) => {
         setMensaje(() => { return (<></>) })
         count < stock ? setCount(count + 1) : setMensaje(() => {
             return (<p style={{ color: "red" }}> Stock alcanzado</p >)
         })
     }
 
-    const restOn = (count) => {
+    const rest = (count) => {
         setMensaje(() => { return (<></>) })
         count > 0 ? setCount(count - 1) : setMensaje(() => { return (<p style={{ color: "red" }}>Sin productos </p>) })
     }
 
+
+    useEffect(() => {
+        setProdShoped(count);
+    }, [count])
+
+
+    const onAdd = (quantityOnAdd) => {
+        console.log("Comprados :" + quantityOnAdd);
+
+    }
 
 
 
@@ -28,16 +43,19 @@ export default function ItemCount({ stock, initial }) {
                 <div className="productslist">
                     <span>Producto Elegido</span>
                     <div className="cantProducto">
-                        <button href="#" className="menos" onClick={() => restOn(count)}
+                        <button href="#" className="menos" onClick={() => rest(count)}
                         >-</button>
                         <p>
                             {count}
                         </p>
-                        <button href="#" className="mas" onClick={() => addOn(count)}>+</button>
+                        <button href="#" className="mas" onClick={() => add(count)}>+</button>
 
 
                     </div>
-                    <button>Agregar al carrito</button>
+                    <button onClick={onAdd(count)}>Agregar al carrito</button>
+                    <Link to={`/cart/${prodShoped}/`}>
+                        <button>Finalizar Compra</button>
+                    </Link>
 
 
                 </div>

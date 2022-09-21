@@ -17,6 +17,7 @@ export const ItemDetails = ({ product }) => {
         </li>
 
       </div>
+
       <ItemCount stock={4} initial={0} />
     </>
   );
