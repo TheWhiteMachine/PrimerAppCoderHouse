@@ -2,14 +2,17 @@ import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useContext } from "react";
+import { AppContext } from "./Provider";
+import Cart from './Cart';
 
-
-export default function ItemCount({ stock, initial }) {
+export default function ItemCount({ stock, initial, item }) {
 
 
     const [count, setCount] = useState(initial);
     const [mensaje, setMensaje] = useState(<></>);
     const [prodShoped, setProdShoped] = useState(0)
+    const { addToCart } = useContext(AppContext)
 
 
     const add = (count) => {
@@ -32,7 +35,7 @@ export default function ItemCount({ stock, initial }) {
 
     const onAdd = (quantityOnAdd) => {
         console.log("Comprados :" + quantityOnAdd);
-
+        // addToCart(item)
     }
 
 

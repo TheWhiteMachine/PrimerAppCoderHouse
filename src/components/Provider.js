@@ -1,18 +1,23 @@
 import { createContext, useState } from "react";
 
+
+
+
 const Provider = ({ children }) => {
-    const { state, setState } = useState([
+    const [cart, setCart] = useState([
         {
-            "title": "iphone",
-            "price": "5000",
-        },
-        {
-            "title": "Earpod",
-            "price": "100",
-        },
+
+        }
     ]);
+
+    const addToCart = (item) => {
+
+        // setCart((prevState) => [...prevState, item])
+
+    }
+
     return (
-        <AppContext.Provider value={{ state, setState }}>
+        <AppContext.Provider value={{ cart, setCart, addToCart }}>
             {children}
         </AppContext.Provider>
     )

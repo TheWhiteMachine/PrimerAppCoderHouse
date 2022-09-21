@@ -1,7 +1,14 @@
 import React from "react";
 import ItemCount from "./ItemCount"
 
+
+
 export const ItemDetails = ({ product }) => {
+
+
+
+
+
   return (
     <>
       <div className="detailsComponent">
@@ -18,7 +25,7 @@ export const ItemDetails = ({ product }) => {
 
       </div>
 
-      <ItemCount stock={4} initial={0} />
+      <ItemCount stock={4} initial={0} item={product} />
     </>
   );
 }

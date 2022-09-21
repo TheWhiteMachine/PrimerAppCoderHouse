@@ -29,10 +29,10 @@ export const ItemDetailsContainer = () => {
 
       <div className="ListofItems">
         {
-          typeof id === "undefined" ?
-            <div>Cargando</div>
-            :
+
+          id ?
             <ItemDetails key={product.id} product={product} />
+            : <div>Cargando</div>
 
         }
 
