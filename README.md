@@ -1,3 +1,16 @@
+# E comerce armado en curso de React Js de CCODERHOUSE
+Por Pablo Riveiro
+
+
+Se usó React JS
+Google Fonts para algunos iconos
+
+Aquí la información de React para la instalación del proyecto
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
