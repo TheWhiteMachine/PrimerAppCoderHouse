@@ -1,22 +1,22 @@
 import { Outlet } from "react-router-dom";
-
+import React from "react";
 import Navbar from "../components/NavBar";
 
 const Layout = () => {
-    return (
-        <div>
-            <Navbar />
+  return (
+    <div>
+      <Navbar />
 
-            <section>
-                <Outlet />
-            </section>
+      <section>
+        <Outlet />
+      </section>
 
-            <footer>
-                Tienda de electronica ficticia que se hace real por medio de la
-                programacion
-            </footer>
-        </div>
-    );
+      <footer>
+        Tienda de electronica ficticia que se hace real por medio de la
+        programacion
+      </footer>
+    </div>
+  );
 };
 
 export default Layout;

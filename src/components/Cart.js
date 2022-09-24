@@ -1,19 +1,43 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import { useContext } from 'react'
-import { AppContext } from "../components/Provider"
+import React from "react";
+import { useCartContext } from "./CartContext";
 
-export default function Cart({ cantProducts }) {
+const Cart = () => {
+  const { cart, removeItem, emptyCart } = useCartContext();
 
-    const { id } = useParams()
-    const { cart, setCart } = useContext(AppContext)
+  const deleteFromCart = (id) => {
+    removeItem(id);
+  };
 
-    return (<>
-        <div>Cart</div>
-        <div>Productos comprados : {id}</div>
-        {/* {cart} */}
+  const deleteCart = () => {
+    emptyCart();
+  };
 
-        {console.log("recibidos" + id)}
-    </>
-    )
-}
+  return (
+    <div className="Cart">
+      <p>Carrito de compra</p>
+      {cart.length > 0 ? (
+        <>
+          <ul>
+            {cart.map((item, index) => {
+              return (
+                <li key={index}>
+                  <p>{item.name}</p>
+                  <p>{item.quantity}</p>
+                  <p>{item.quantity * item.price}</p>
+                  <button onClick={() => deleteFromCart(item)}>
+                    Eliminar del carrito
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      ) : (
+        <p>Np hay productos en tu carrito</p>
+      )}
+      <button onClick={() => deleteCart()}>Vaciar carrito</button>
+    </div>
+  );
+};
+
+export default Cart;

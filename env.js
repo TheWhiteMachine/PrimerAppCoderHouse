@@ -1,0 +1,2 @@
+REACT_APP_PROJECT_ID = ecomercecoderhosue;
+REACT_APP_API_KEY = AIzaSyCWpnfgvLV8YKkxhANRV8gLyVyxBh4vsZs;
