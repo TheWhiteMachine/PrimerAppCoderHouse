@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-export default function ItemCount({ stock, initial, onAdd }) {
+const ItemCount = ({ stock, initial, onAdd }) => {
     const [qty, setQty] = useState(initial);
     const [mensaje, setMensaje] = useState(<></>);
 
@@ -72,3 +72,4 @@ export default function ItemCount({ stock, initial, onAdd }) {
         </div>
     );
 }
+export default ItemCount

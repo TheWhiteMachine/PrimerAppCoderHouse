@@ -56,6 +56,6 @@ const CartProvider = ({ children }) => {
     emptyCart,
   };
 
-  return <Provider value={{ contextValue }}>{children}</Provider>;
+  return <Provider value={contextValue}>{children}</Provider>;
 };
 export default CartProvider;

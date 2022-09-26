@@ -26,7 +26,7 @@ const Cart = () => {
                   <p>{item.quantity}</p>
                   <p>{item.quantity * item.price}</p>
                   <button onClick={() => deleteFromCart(item)}>
-                    Eliminar del carrito
+                    Eliminar
                   </button>
                 </li>
               );
