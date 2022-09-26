@@ -1,11 +1,11 @@
 import { createContext, useState, useContext } from "react";
 import React from "react";
 
-export const cardContext = createContext();
+export const cartContext = createContext();
 
-export const { Provider } = cardContext;
+export const { Provider } = cartContext;
 
-export const useCartContext = () => useContext(cardContext);
+export const useCartContext = () => useContext(cartContext);
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
@@ -18,7 +18,7 @@ const CartProvider = ({ children }) => {
     setTotalPrice(totalPrice + product.price * quantity);
     if (isInCart(product.id)) {
       const newCart = cart.map((item) => {
-        if (item.id === product.id) {
+        if (item.id == product.id) {
           return { ...item, quantity: item.quantity + quantity };
         } else {
           return item;

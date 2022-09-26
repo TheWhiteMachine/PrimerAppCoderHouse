@@ -1,5 +1,6 @@
 import React from "react";
-import CartProvider from "../components/CartContext";
+import Cart from "../components/Cart";
+import CartProvider from "../components/cartContext";
 
 import { ItemListContainer } from "../components/ItemListContainer";
 
@@ -9,12 +10,7 @@ const Home = () => {
       <CartProvider>
         <ItemListContainer greetings="Mira que precios" />
         <h2>Elije detalles para saber mas de cada producto</h2>
-        {cart &&
-          cart.map((producto, i) => (
-            <p key={i}>
-              {cart.name},{cart.price}
-            </p>
-          ))}
+        <Cart />
       </CartProvider>
     </div>
   );

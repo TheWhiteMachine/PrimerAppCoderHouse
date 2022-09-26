@@ -5,7 +5,7 @@ import { ItemListContainer } from "../components/ItemListContainer";
 import { ItemDetailsContainer } from "../components/ItemDetailsContainer";
 import Cart from "../components/Cart";
 import React from "react";
-import CartProvider from "..components/CardContext";
+import CartProvider from "../components/cartContext";
 
 const Router = () => (
   <CartProvider>

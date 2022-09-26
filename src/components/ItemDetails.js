@@ -1,14 +1,14 @@
 import React from "react";
 import ItemCount from "./ItemCount";
-import { useCartContext } from "./CartContext";
-import { useContext } from "react";
+import { useCartContext } from "./cartContext";
 
 export const ItemDetails = ({ product }) => {
-  const { cart, addToCart } = useContext();
+  const { cart, addToCart } = useCartContext();
 
-  const onAdd = (quanity) => {
-    addToCart(product, quanity);
+  const onAdd = (quantity) => {
+    addToCart(product, quantity);
   };
+
   return (
     <>
       <div className="detailsComponent">
@@ -18,7 +18,7 @@ export const ItemDetails = ({ product }) => {
           <br></br>
 
           <b>
-            <span> Precio {product.price}</span>
+            <span> Precio $ {product.price}</span>
           </b>
           <p> {product.description}</p>
         </li>

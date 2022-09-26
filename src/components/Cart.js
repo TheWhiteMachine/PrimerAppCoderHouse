@@ -1,5 +1,5 @@
 import React from "react";
-import { useCartContext } from "./CartContext";
+import { useCartContext } from "./cartContext";
 
 const Cart = () => {
   const { cart, removeItem, emptyCart } = useCartContext();
@@ -15,7 +15,8 @@ const Cart = () => {
   return (
     <div className="Cart">
       <p>Carrito de compra</p>
-      {cart.length > 0 ? (
+      {cart &&
+        cart.length > 0 ? (
         <>
           <ul>
             {cart.map((item, index) => {
