@@ -1,8 +1,11 @@
 import React from "react";
 import { useCartContext } from "./cartContext";
 
-const Cart = () => {
-  const { cart, removeItem, emptyCart } = useCartContext();
+export default function Cart() {
+  const { cart, removeItem, emptyCart, totalQty, totalPrice } = useCartContext();
+
+  console.log("precio total llega?  ", totalPrice)
+
 
   const deleteFromCart = (id) => {
     removeItem(id);
@@ -22,9 +25,8 @@ const Cart = () => {
             {cart.map((item, index) => {
               return (
                 <li key={index}>
-                  <p>{item.name}</p>
-                  <p>{item.quantity}</p>
-                  <p>{item.quantity * item.price}</p>
+                  <p>{item.quantity} - {item.name} -- </p>
+                  <p>$ - {item.quantity * item.price} -- </p>
                   <button onClick={() => deleteFromCart(item)}>
                     Eliminar
                   </button>
@@ -36,9 +38,12 @@ const Cart = () => {
       ) : (
         <p>Np hay productos en tu carrito</p>
       )}
+      <p>{totalQty} Productos en tu Carrito</p>
+      <b>Total : {totalPrice} </b>
+
       <button onClick={() => deleteCart()}>Vaciar carrito</button>
     </div>
   );
 };
 
-export default Cart;
+

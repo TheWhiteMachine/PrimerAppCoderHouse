@@ -9,8 +9,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     const [mensaje, setMensaje] = useState(<></>);
 
 
+
     const onChangeHandller = (e) => {
         let a;
+
         if (parseInt(e.target.value)) {
             a = parseInt(e.target.value);
         } else {
@@ -61,8 +63,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                             +
                         </button>
                     </div>
-                    <button onClick={onAdd(qty)}>Agregar al carrito</button>
-                    <Link to={`/cart/${qty}/`}>
+                    <button onClick={() => {
+                        console.log(qty)
+                        onAdd(qty)
+                    }}>Agregar al carrito</button>
+                    <Link to="/cart/">
                         <button>Finalizar Compra</button>
                     </Link>
                 </div>

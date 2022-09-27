@@ -1,21 +1,26 @@
 import { createContext, useState, useContext } from "react";
 import React from "react";
 
-export const cartContext = createContext();
+export const CartContext = createContext();
 
-export const { Provider } = cartContext;
+export const useCartContext = () => useContext(CartContext)
 
-export const useCartContext = () => useContext(cartContext);
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalQty, setTotalQty] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const addToCart = (product, quantity) => {
-    console.log(product);
+  const addToCart = (product, quantity, totalQty, totalPrice) => {
+    console.log("Producto y cantidad", product, quantity);
+
+
     setTotalQty(totalQty + quantity);
-    setTotalPrice(totalPrice + product.price * quantity);
+    setTotalPrice(totalPrice + (product.price * quantity));
+
+
+
+    console.log("total cantidad :", totalQty)
     if (isInCart(product.id)) {
       const newCart = cart.map((item) => {
         if (item.id == product.id) {
@@ -56,6 +61,6 @@ const CartProvider = ({ children }) => {
     emptyCart,
   };
 
-  return <Provider value={contextValue}>{children}</Provider>;
+  return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>;
 };
 export default CartProvider;

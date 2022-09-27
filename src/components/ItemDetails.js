@@ -1,14 +1,12 @@
 import React from "react";
 import ItemCount from "./ItemCount";
-import { cartContext, useCartContext } from "./cartContext";
+import { useCartContext } from "./cartContext";
 
 
 export const ItemDetails = ({ product }) => {
-  const { cart, addToCart } = useCartContext([]);
+  const { cart, addToCart, totalQty, totalPrice, } = useCartContext();
 
-  const onAdd = (quantity) => {
-    addToCart(product, quantity)
-  };
+
 
   return (
     <>
@@ -25,7 +23,7 @@ export const ItemDetails = ({ product }) => {
         </li>
       </div>
 
-      <ItemCount stock={4} initial={0} onAdd={onAdd} />
+      <ItemCount stock={4} initial={0} onAdd={(qty) => addToCart(product, qty, totalQty, totalPrice)} />
     </>
   );
 };
