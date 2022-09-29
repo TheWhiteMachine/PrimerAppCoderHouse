@@ -14,12 +14,9 @@ export const ItemDetailsContainer = () => {
 
   useEffect(() => {
     id ?
-
-      getProducts.then(data => setProduct(data.find(item => item.id == id)))
-
+      setProduct({ getProducts }.map(item => item.id == id))
       :
-      getProducts.then(data => setProduct(data))
-
+      setProduct({ getProducts })
   }, [id]);
 
 

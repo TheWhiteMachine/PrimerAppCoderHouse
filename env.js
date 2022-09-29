@@ -1,2 +1,12 @@
 REACT_APP_PROJECT_ID = ecomercecoderhosue;
 REACT_APP_API_KEY = AIzaSyCWpnfgvLV8YKkxhANRV8gLyVyxBh4vsZs;
+
+
+
+REACT_APP_API_APIKEY = AIzaSyCWpnfgvLV8YKkxhANRV8gLyVyxBh4vsZs,
+    REACT_APP_API_AUTHDOMAIN = ecomercecoderhosue.firebaseapp.com;
+REACT_APP_API_PROJECTID = ecomercecoderhosue,
+    REACT_APP_API_STORAGEBUCKET = ecomercecoderhosue.appspot.com;
+REACT_APP_API_MESSAGINGSENDERID = 1097228700636,
+    REACT_APP_API_APPID = 1: 1097228700636: web: cd9567ee9d98d873b6dd19,
+        REACT_APP_API_MEASUREMENTID = G - P7ZMRR3CVT,

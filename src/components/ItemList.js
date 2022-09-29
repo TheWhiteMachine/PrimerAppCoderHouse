@@ -9,6 +9,7 @@ export default function ItemList({ datos }) {
   return (
     <>
       <div className="ListofItems">
+        {console.log(datos)}
         {datos.map((item) => (
           <Item key={item.id} product={item} />
         ))}

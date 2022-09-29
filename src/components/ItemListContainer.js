@@ -9,7 +9,7 @@ import { getProducts } from "../Utils/Products"
 export const ItemListContainer = ({ greetings }) => {
 
   const { id } = useParams();
-  const [datos, setDatos] = useState([]);
+  const [datos, setDatos] = useState();
 
   useEffect(() => {
     id ?
