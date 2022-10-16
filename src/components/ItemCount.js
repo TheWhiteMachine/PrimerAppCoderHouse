@@ -63,12 +63,14 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                             +
                         </button>
                     </div>
-                    <button onClick={() => {
+                    <button id="Agregar" onClick={() => {
                         console.log(qty)
+                        const borrar = document.getElementById("Agregar");
+                        borrar.style.display = 'none';
                         onAdd(qty)
-                    }}>Agregar al carrito</button>
+                    }} >Agregar al carrito</button>
                     <Link to="/cart/">
-                        <button>Finalizar Compra</button>
+                        <button>Continuar Compra</button>
                     </Link>
                 </div>
 

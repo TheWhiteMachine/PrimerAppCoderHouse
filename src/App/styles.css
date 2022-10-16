@@ -244,3 +244,16 @@ footer {
     align-content: stretch;
     flex-direction: row;
 }
+
+.shopForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+}
+
+.shopForm button {
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(191, 242, 225, 0.959);
+}

@@ -23,22 +23,27 @@ export const ItemDetailsContainer = () => {
     const getItems = async () => {
       const colRef = collection(db, "productos");
       const result = await getDocs(query(colRef));
+
+      return typeof id == "undefined"
+        ? result.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+        : result.docs
+          .map((doc) => ({ ...doc.data(), id: doc.id }))
+          .find((prod) => prod.id == id);
+
     };
-    getItems()
-      .then((data) => setProduct(data))
-      .filter((p) => p.id == id);
-    console.log("params", id);
+    console.log("id", id)
+    getItems().then((data) => setProduct(data));
+    console.log("products", product);
   }, [id]);
-  console.log("products", product);
 
   return (
     <>
       <div className="ListofItems">
-        {id ? (
+        {product ?
           <ItemDetails key={product.id} product={product} />
-        ) : (
+          :
           <div>Cargando</div>
-        )}
+        }
       </div>
     </>
   );

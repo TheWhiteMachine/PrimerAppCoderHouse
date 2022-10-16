@@ -5,6 +5,7 @@ import { ItemListContainer } from "../components/ItemListContainer";
 import { ItemDetailsContainer } from "../components/ItemDetailsContainer";
 import Cart from "../components/Cart";
 import React from "react";
+import Gracias from "../components/gracias";
 import CartProvider from "../components/cartContext";
 
 const Router = () => (
@@ -15,6 +16,7 @@ const Router = () => (
           <Route path="/" element={<Home />} />
           <Route path={"/category/:id"} element={<ItemListContainer />} />
           <Route path={"/cart/"} element={<Cart />} />
+          <Route path={"/gracias/"} element={<Gracias />} />
           <Route path={`/item/:id`} element={<ItemDetailsContainer />} />
           <Route
             path="*"

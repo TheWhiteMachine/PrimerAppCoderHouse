@@ -10,7 +10,7 @@ export default function Item({ product }) {
     <div className="item">
       <li className="productItem" key={product.id}>
         <h2>{product.title}</h2>
-        <img src={product.pic} alt="img"></img>
+        <img src={product.image} alt="img"></img>
         <span> Precio {product.price}</span>
         <Link to={`/item/${product.id}/`}>
           <button>Detalles</button>

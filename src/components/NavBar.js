@@ -49,7 +49,7 @@ function Navbar() {
         <CartWidget cantProducts={totalQty} />
       </div>
       <div>
-        <h2>Las ofertas de la semana</h2>
+        <h2>Ofertas Tecno</h2>
       </div>
     </>
   );
