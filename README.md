@@ -5,6 +5,21 @@ Por Pablo Riveiro
 Se usó React JS
 Google Fonts para algunos iconos
 
+Luego de trabajar con una lista de productos harcodeados localmente agregamos una base de datos de Firebase
+
+
+Les compartimos un recorrido por el proceso de compra:
+
+![1](https://user-images.githubusercontent.com/58869893/196053040-028788cf-01c0-488d-8e66-0e1ce1b6360f.png)
+![2](https://user-images.githubusercontent.com/58869893/196053056-645aed78-bb48-40a5-abb6-2331c08539eb.png)
+![3](https://user-images.githubusercontent.com/58869893/196053057-e0818d7e-743b-45f8-a84b-b8633e7fb088.png)
+![4](https://user-images.githubusercontent.com/58869893/196053058-7b2cd8ce-3b38-41d4-a9ab-11132279dfa4.png)
+![5](https://user-images.githubusercontent.com/58869893/196053063-bed4558f-c77e-4bc6-bb15-9055d95e4ef1.png)
+![6](https://user-images.githubusercontent.com/58869893/196053065-bbfd7a79-c2a1-4e59-a248-7fea241578d1.png)
+![7](https://user-images.githubusercontent.com/58869893/196053070-6f0e8685-724f-4ec8-b292-993bab4ebc1b.png)
+![8](https://user-images.githubusercontent.com/58869893/196053074-2f704056-b635-4826-9910-cfe2b522da56.png)
+
+
 Aquí la información de React para la instalación del proyecto
 
 
