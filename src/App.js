@@ -1,6 +1,6 @@
 import Router from "./App/Router";
 import "./App/styles.css";
-import Provider from "./components/cartContext";
+import Provider from "./components/CartContext";
 import * as React from "react";
 
 function App() {
