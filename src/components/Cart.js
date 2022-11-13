@@ -2,14 +2,14 @@ import { addDoc, collection } from "firebase/firestore";
 import React from "react";
 import { db } from "../App/firebaseConfig";
 import { useState } from "react";
-import { useCartContext } from "./cartContext";
+import { useCartContext } from "./CartContext";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
   const { cart, removeItem, emptyCart, totalQty, totalPrice } = useCartContext();
   const [user, setUser] = useState({
     nombre: '',
-    telefono: null,
+    telefono: '',
     email: ''
   });
 
@@ -65,11 +65,11 @@ export default function Cart() {
 
       <form className="shopForm" onSubmit={handleOrder}>
         <label>Nombre</label>
-        <input type="text" value={user.nombre} onChange={(e) => setUser({ ...user, nombre: e.target.value })} />
+        <input type="text" value={'' || user.nombre} onChange={(e) => setUser({ ...user, nombre: e.target.value })} />
         <label>Telefono</label>
-        <input type="nunber" value={user.telefono} onChange={(e) => setUser({ ...user, telefono: e.target.value })} />
+        <input type="nunber" value={'' || user.telefono} onChange={(e) => setUser({ ...user, telefono: e.target.value })} />
         <label>Email</label>
-        <input type="text" value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} />
+        <input type="text" value={'' || user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} />
 
         <button onClick={() => handleOrder()}> <Link to="/gracias/">REALIZAR COMPRA </Link></button>
 

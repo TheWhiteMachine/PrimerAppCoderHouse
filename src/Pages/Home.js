@@ -1,7 +1,7 @@
 import React from "react";
 import Cart from "../components/Cart";
-import CartProvider from "../components/cartContext";
-import { cartContext } from "../components/cartContext";
+import CartProvider from "../components/CartContext";
+import { CartContext } from "../components/CartContext";
 import { ItemListContainer } from "../components/ItemListContainer";
 
 const Home = () => {

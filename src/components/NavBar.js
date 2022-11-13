@@ -1,7 +1,7 @@
 import * as React from "react";
 import { CartWidget } from "./CartWidget";
 import { Link } from "react-router-dom";
-import { useCartContext } from '../components/cartContext'
+import { useCartContext } from '../components/CartContext'
 
 function Navbar() {
 
